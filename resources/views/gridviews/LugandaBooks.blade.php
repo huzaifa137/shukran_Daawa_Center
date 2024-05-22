@@ -178,7 +178,7 @@
                         <h5 class="widget-sub-title" data-control>Sheikhs</h5>
                         <div class="widget_categories" data-content>
                             <ul>
-                                <li><a href="{{url('search-ulaamah/sheikh Quraish Mazinga')}}">sheikh Quraish Mazinga</span></a></li>
+                                {{-- <li><a href="{{url('search-ulaamah/sheikh Quraish Mazinga')}}">sheikh Quraish Mazinga</span></a></li> --}}
                             </ul>
                         </div>
                 </div>
