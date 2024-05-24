@@ -48,7 +48,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="form-label">Full Name</label>
-                                        <select class="form-control" name="sheikh_name" value="{{$data->sheikh_name}}" required>
+                                        <select class="form-control" name="sheikh_name" required>
+                                            <option value="{{$data->sheikh_name}}">{{$data->sheikh_name}}</option>
                                             <option value="Muhammad Quraish Mazinga">Muhammad Quraish Mazinga</option>
                                             <option value="Adam Ssenjala">Adam Ssenjala</option>
                                             <option value="Muhsin Burhan Kitti">Muhsin Burhan Kitti</option>

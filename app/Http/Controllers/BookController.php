@@ -696,6 +696,42 @@ class BookController extends Controller
         return view('Audio.EditAudio',compact(['data']));
     }
 
+    public function EditQuran(Request $request)
+    {
+        $data = Quran::find($request->id);
+        return view('Quran.EditQuran',compact(['data']));
+    }
+
+
+    public function UpdateQuranAudio(Request $request)
+    {
+
+        $request->validate([
+            'SurahName'=>'required',
+            'ScholarName'=>'required',
+            'QuranAudio'=>'required|file|mimes:mp3,ogg',
+        ]);
+
+        $post = Quran::find($request->id);
+        
+        $post->SurahName = $request->SurahName;
+        $post->ScholarName = $request->ScholarName;
+        $file = $request->QuranAudio;
+
+        $filename=date('YmdHi').'.'.$file->getClientOriginalExtension();
+        $file->move('quran_audios',$filename);
+        $post['QuranAudio']=$filename;
+        
+        $save=$post->save();
+       
+        if($save){
+            return redirect('All-Quran')->with('success','Quran Audio has been updated successfully');
+        }
+        else{
+            echo "Data has not been stored !!!";
+        }
+    }
+
     public function UpdateAudio(Request $request)
     {
         $request->validate([
@@ -722,8 +758,7 @@ class BookController extends Controller
 
     if($save)
     {   
-        return redirect()->back()->with('success','Audio has been Updated successfully');
-        
+        return redirect('All-Audio')->with('success','Audio has been Updated successfully');
     }
     }
 
@@ -731,7 +766,17 @@ class BookController extends Controller
     {
         $data = Audio::find($id);
         $data->delete();
+        
         return redirect('All-Audio')->with('success','Audio has been deleted successfully');
+    }
+
+
+    public function deleteQuran($id)
+    {
+        $data = Quran::find($id);
+        $data->delete();
+        
+        return redirect('All-Quran')->with('success','Quran Audio has been deleted successfully');
     }
 
 // Video Configurations.
@@ -771,7 +816,7 @@ class BookController extends Controller
         $data = Video::find($id);
         $data->delete();
 
-        return redirect()->back()->with('success','Video has been Deleted successfully');
+        return redirect()->back()->with('success','Video has been deleted successfully');
     }
 
     public function UpdateVideo(Request $request){
@@ -793,7 +838,8 @@ class BookController extends Controller
         $post->Catagory=$request->Catagory;
         $post->save();
 
-        return redirect()->back()->with('success','Video has been Updated successfully');
+        return redirect('All-videos')->with('success','Video has been Updated successfully');
+
     }
 
 
@@ -971,7 +1017,7 @@ class BookController extends Controller
             $save=$post->save();
            
             if($save){
-                return redirect()->back()->with('success','Quranic Audio has been uploaded Successfully');
+                return redirect('All-Quran')->with('success','Quran Audio has been uploaded successfully');
             }
             else{
                 echo "Data has not been stored !!!";

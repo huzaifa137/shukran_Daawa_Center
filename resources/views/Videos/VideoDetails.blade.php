@@ -14,8 +14,8 @@
                             </div>
                 
                             <iframe width="100%" height="397" src="{{$data->video_link}}" frameborder="0" ></iframe>
-
-                            <h2>Sheikh: {{$data->sheikh_name}}</h2>
+                            
+                            <h2 style="margin-top: 1rem;">Sheikh: {{$data->sheikh_name}}</h2>
                            <strong><p>Catagory :</strong>  {{$data->Catagory}}</p>
                            <strong><p>Summary : </strong>{{$data->Summary}}</p>
                         </div>
@@ -121,7 +121,7 @@
                         <h5 class="widget-sub-title" data-control>Sheikhs</h5>
                         <div class="widget_categories" data-content>
                             <ul>
-                                <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">Sheikh Saleh al Fawzan</span></a></li>
+                                {{-- <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">Sheikh Saleh al Fawzan</span></a></li> --}}
                             </ul>
                         </div>
                 </div>

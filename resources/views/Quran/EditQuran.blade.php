@@ -33,7 +33,7 @@
                         <h5 class="card-title">Basic Info</h5>
                     </div>
                     <div class="card-body">
-                        <form id="myForm" action="{{route('upload-Quran')}}" method="POST" enctype="multipart/form-data" onsubmit="disableButton()">
+                        <form id="myForm" action="{{route('update-Quran')}}" method="POST" enctype="multipart/form-data" onsubmit="disableButton()">
                             @csrf
                             <div class="row">
                                 
@@ -41,6 +41,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Surah Name</label>
                                         <select class="form-control" name="SurahName" required>
+                                            <option value="{{$data->SurahName}}">{{$data->SurahName}}</option>
                                             <option value="">Select Surah Name</option>
                                             <option value="Surat Al-Fatihah">Surat Al-Fatihah</option>
                                             <option value="Surat Al-Baqarah">Surat Al-Baqarah</option>
@@ -165,6 +166,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Scholar Name</label>
                                         <select class="form-control" name="ScholarName" required>
+                                            <option value="{{$data->ScholarName}}">{{$data->ScholarName}}</option>
                                             <option value="">Select Hafidhu | Reciter</option>
                                             <option value="Abdullah Awad al-Juhani">Abdullah Awad al-Juhani</option>
                                             <option value="Abdullah Basfar">Abdullah Basfar</option>
@@ -327,6 +329,8 @@
                                      <span style="color: red">@error('QuranAudio'){{$message}} @enderror</span>
                                     </div>
                                 </div>
+
+                                <input type="hidden" name="id" value="{{$data->id}}">
 
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <button type="submit" class="btn btn-primary">Submit</button>

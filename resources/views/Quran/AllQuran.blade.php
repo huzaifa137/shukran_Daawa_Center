@@ -53,8 +53,8 @@
 												<td>{{$info->ScholarName}}</td>
 												<td>{{$info->QuranAudio}}</td>
 												<td>
-													<a href="{{'Edit-Audio/'.$info->id}}" class="btn btn-sm btn-primary" onclick="return confirm('Are you sure you want to edit this Audio ?')"><i class="la la-pencil"></i></a>
-													<a href="{{'delete-Audio/'.$info->id}}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this Audio ?')"><i class="la la-trash-o"></i></a>
+													<a href="{{'Edit-Quran/'.$info->id}}" class="btn btn-sm btn-primary" onclick="return confirm('Are you sure you want to edit this Quran audio ?')"><i class="la la-pencil"></i></a>
+													<a href="{{'delete-Quran/'.$info->id}}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this Quran audio ?')"><i class="la la-trash-o"></i></a>
 												</td>												
 											</tr>
 											@endforeach

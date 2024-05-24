@@ -56,7 +56,7 @@
                                 </ul>
                             </div>
                             <header class="entry-header">
-                                <h3 class="entry-title"><a href="books-media-detail-v1.html">{{$info->topic}}</a></h3>
+                                <h3 class="entry-title"><a href="{{'watch-video/'.$info->id}}">{{$info->topic}}</a></h3>
                                 <ul>
                                     <li><strong>Sheikh : </strong>{{$info->sheikh_name}}</li>
                                 </ul>
@@ -171,7 +171,7 @@
                         <h5 class="widget-sub-title" data-control>Sheikhs</h5>
                         <div class="widget_categories" data-content>
                             <ul>
-                                <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">sheikh Saleh al Fawzan</span></a></li>
+                                {{-- <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">sheikh Saleh al Fawzan</span></a></li> --}}
                             </ul>
                         </div>
                 </div>

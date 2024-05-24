@@ -68,23 +68,23 @@ Route::middleware(['middleware'=>'AuthCheck'])->group(function () {
     Route::get('Edit-sheikh/{id}',[BookController::class,'EditSheikhInfo']);
     Route::get('delete-sheikh/{id}',[BookController::class,'DeleteSheikh']);
     Route::get('auth.register',[BookController::class,'register'])->name('auth.register');
+    Route::get('Edit-Quran/{id}',[BookController::class,'EditQuran'])->name('Edit-Quran');
+    Route::get('delete-Quran/{id}',[BookController::class,'deleteQuran']);
 }); 
-
-Route::get('adhkar-details/{id}',[BookController::class,'adhkarDetails'])->name('adhkar-details');
-
-Route::post('fill-first-name',[BookController::class,'fillFirstName'])->name('fill-first-name');
 
 Route::get('auth.login',[BookController::class,'login'])->name('auth.login');
 
-Route::post('auth.save',[BookController::class,'store1'])->name('auth.save');
-Route::post('auth.check',[BookController::class,'verify'])->name('auth.check');
-Route::post('send-message',[BookController::class,'SendMessage'])->name('send-message');
 
 Route::get('search-bar',[BookController::class,'SearchBar'])->name('search-bar');
 Route::get('fetchRecords/{keyword}',[BookController::class,'fetchRecords'])->name('fetchRecords-link');
 Route::get('search/{keyword}',[BookController::class,'searchInfo'])->name('search-link');
 Route::get('search-ulaamah/{keyword}',[BookController::class,'search_Scholar'])->name('search-link');
+Route::get('adhkar-details/{id}',[BookController::class,'adhkarDetails'])->name('adhkar-details');
 
+Route::post('fill-first-name',[BookController::class,'fillFirstName'])->name('fill-first-name');
+Route::post('auth.save',[BookController::class,'store1'])->name('auth.save');
+Route::post('auth.check',[BookController::class,'verify'])->name('auth.check');
+Route::post('send-message',[BookController::class,'SendMessage'])->name('send-message');
 
 
 //Dua and Adhkar routes
@@ -126,7 +126,6 @@ Route::post('update-video',[BookController::class,'UpdateVideo'])->name('update-
 // Islamic Calendar
 Route::get('showDate',[BookController::class,'carbonDate']);
 
-
 //Quran Routes
 
 Route::get('Quran-Audio',[BookController::class,'QuranAudio'])->name('Quran-Audio');
@@ -135,6 +134,7 @@ Route::get('/download-Quran/{file}',[BookController::class,'downloadQuran']);
 Route::get('All-Quran',[BookController::class,'AllQuran'])->name('All-Quran');
 
 Route::post('upload-Quran',[BookController::class,'UploadQuranAudio'])->name('upload-Quran');
+Route::post('update-Quran',[BookController::class,'UpdateQuranAudio'])->name('update-Quran');
 Route::post('store-sheikh',[BookController::class,'StoreSheikh'])->name('store-sheikh');
 Route::post('update-sheikh-info',[BookController::class,'UpdateSheikhInfo'])->name('update-sheikh-info');
 

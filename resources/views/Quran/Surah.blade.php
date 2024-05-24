@@ -215,14 +215,14 @@
                                             <span class="underline center" ></span>
                                             <ol class="comment-list">
 
-                                                @foreach ($IndividualQuranReciters as $IndividualReciter)
+                                                @foreach ($IndividualQuranReciters as $key => $IndividualReciter)
 
                                                 <li class="comment even thread-even depth-1 parent">
                                                     <div class="comment-body">
                                                         <div class="comment-author vcard">
                                                             <img class="avatar avatar-32 photo avatar-default" src="/assets/images/QuranLogo.png" alt="Comment Author">
                                                             <b class="fn">
-                                                                <a class="url" rel="external nofollow" href="#">{{$IndividualReciter->id}}.</a>
+                                                                <a class="url" rel="external nofollow" href="#">{{$key+1}}.</a>
                                                             </b>					
                                                         </div>
                                                         <footer class="comment-meta">

@@ -9,7 +9,7 @@
     
                 <li>
                     <figure>
-                        <iframe width="100%" height="397" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" ></iframe>
+                        <iframe width="100%" height="397" src="{{$info->video_link}}" frameborder="0" ></iframe>
                         
                         <figcaption>
                             <p><strong>Sheikh: {{$info->sheikh_name}}</strong></p>
@@ -56,7 +56,7 @@
                                 </ul>
                             </div>
                             <header class="entry-header">
-                                <h3 class="entry-title"><a href="books-media-detail-v1.html">{{$info->topic}}</a></h3>
+                                <h3 class="entry-title"><a href="{{ url('watch-video/'.$info->id) }}">{{$info->topic}}</a></h3>
                                 <ul>
                                     <li><strong>Sheikh : </strong>{{$info->sheikh_name}}</li>
                                 </ul>
@@ -65,7 +65,7 @@
                                <p>{{$info->Summary}}</p>
                             </div>
                             <footer class="entry-footer">
-                                <a class="btn btn-primary" href="{{'watch-video/'.$info->id}}">Read More</a>
+                                <a class="btn btn-primary" href="{{ url('watch-video/'.$info->id)}}">Read More</a>
                             </footer>
                         </div>
                     </div>                                       
@@ -171,7 +171,7 @@
                         <h5 class="widget-sub-title" data-control>Sheikhs</h5>
                         <div class="widget_categories" data-content>
                             <ul>
-                                <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">sheikh Saleh al Fawzan</span></a></li>
+                                {{-- <li><a href="{{url('search/sheikh/Saleh al Fawzan')}}">sheikh Saleh al Fawzan</span></a></li> --}}
                             </ul>
                         </div>
                 </div>

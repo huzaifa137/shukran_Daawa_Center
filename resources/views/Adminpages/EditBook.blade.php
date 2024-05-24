@@ -51,7 +51,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="form-label">Catagories</label>
-                                        <select class="form-control" name="Catagory" value="{{$info->Catagory}}">
+                                        <select class="form-control" name="Catagory">
+                                            <option value="{{$info->Catagory}}">{{$info->Catagory}}</option>
                                             <option value="AQEEDAH">AQEEDAH</option>
                                             <option value="SHIRK">SHIRK</option>
                                             <option value="QURAN">QURAN</option>
@@ -136,7 +137,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="form-label">Language</label>
-                                        <select class="form-control" name="language" value="{{$info->Language}}">
+                                        <select class="form-control" name="language">
+                                            <option value="{{$info->Language}}">{{$info->Language}}</option>
                                             <option value="Luganda">Luganda</option>
                                             <option value="English">English</option>
                                             <option value="اللغة العربية">اللغة العربية</option>
@@ -167,7 +169,8 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="form-label">Edition </label>
-                                        <select class="form-control" name="Edition" value="{{$info->Edition}}">
+                                        <select class="form-control" name="Edition" >
+                                            <option value="{{$info->Edition}}">{{$info->Edition}}</option>
                                             <option value="First Edition">First Edition</option>
                                             <option value="Second Edition">Second Edition</option>
                                             <option value="Third Edition">Third Edition</option> 

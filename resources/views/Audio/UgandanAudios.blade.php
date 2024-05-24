@@ -182,16 +182,7 @@
     
                     <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                         <div class="subscribe-form-wrap">
-                            <h6>Subscribe. Every weekly.</h6>
-    
-                            <form class="custom-form subscribe-form" action="javascript:void();" method="get" role="form">
-                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                                    class="form-control" placeholder="Email Address" required="">
-    
-                                <div class="col-lg-12 col-12">
-                                    <button type="submit" class="form-control" id="submit">Subscribe</button>
-                                </div>
-                            </form>
+                            <h6>Bring back the love of Sunnah</h6>
                         </div>
                     </div>
     

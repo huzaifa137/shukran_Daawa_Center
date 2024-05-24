@@ -84,7 +84,7 @@
                                     <li class="dropdown">
                                         <a data-toggle="dropdown" class="dropdown-toggle disabled" href="{{route('All-videos')}}">Videos</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="{{route('Ugandan-Sheikhs')}}">Ugandan Sheikhs</a></li>
+                                            <li><a href="{{route('All-videos')}}">Ugandan Sheikhs</a></li>
                                             <li><a href="javascript:void(0);">Arabic Sheikhs</a></li>
                                             <li><a href="javascript:void(0);">English Sheikhs</a></li>
                                         </ul>
