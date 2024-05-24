@@ -237,7 +237,7 @@ class BookController extends Controller
 
         if(strcmp($password1,$password2)!=0)
         {
-            return back()->with('fail','Password entered don\'t much');
+            return back()->withInput()->with('fail', 'Password entered do not match');
         }
 
         $post = new Admin();

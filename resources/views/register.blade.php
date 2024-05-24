@@ -13,13 +13,31 @@
 </head>
 
 <body>
+
+    <style>
+        body {
+            background-image: url('/assets/images/sunnah_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+        }
+    </style>
+
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="signup-form">
                     <form action="{{ route('auth.save') }}" class="mt-5 border p-4 bg-light shadow" method="POST">
                         @csrf
-                        <h4 class="mb-5 text-center text-primary">Create New Admin User</h4>
+
+                        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                            <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk" style="height: 100px;width: 100px;">
+                        </div>
+
+
+                        <h4 class="mb-3 mt-2 text-center text-primary">Create New Admin User</h4>
                         @if (Session::get('success'))
                             <div class="alert alert-success">
                                 {{ Session::get('success') }}
@@ -36,7 +54,7 @@
                             <div class="mb-3 col-md-12">
                                 <label>Admin Name<span class="text-danger">*</span></label>
                                 <input type="text" name="fname" class="form-control"
-                                    placeholder="Enter Business Name" value="{{ old('fname') }}">
+                                    placeholder="Enter User Name" value="{{ old('fname') }}">
                                 <span class="text-danger">
                                     @error('fname')
                                         {{ $message }}
@@ -46,7 +64,7 @@
 
                             <div class="mb-3 col-md-12">
                                 <label>Email<span class="text-danger">*</span></label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter Email"
+                                <input type="email" name="email" class="form-control" placeholder="Enter User Email"
                                     value="{{ old('email') }}">
                                 <span class="text-danger">
                                     @error('email')
@@ -58,7 +76,7 @@
                             <div class="mb-3 col-md-12">
                                 <label>Phone number<span class="text-danger">*</span></label>
                                 <input type="number" name="phonenumber" class="form-control"
-                                    placeholder="Enter phone number" value="{{ old('phonenumber') }}">
+                                    placeholder="Enter User phone number" value="{{ old('phonenumber') }}">
                                 <span class="text-danger">
                                     @error('phonenumber')
                                         {{ $message }}
@@ -80,7 +98,7 @@
                             <div class="mb-3 col-md-12">
                                 <label>Confirm Password<span class="text-danger">*</span></label>
                                 <input type="password" name="confirm_password" class="form-control"
-                                    placeholder="Enter Password">
+                                    placeholder="Confirm Entered Password">
                                 <span style="color: red">
                                     @error('confirm_password')
                                         {{ $message }}

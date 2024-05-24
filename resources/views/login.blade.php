@@ -14,13 +14,29 @@
 
 <body>
 
+    <style>
+        body {
+            background-image: url('/assets/images/sunnah_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+        }
+    </style>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="signup-form">
                     <form action="{{ route('auth.check') }}" class="mt-5 border p-4 bg-light shadow" method="POST">
                         @csrf
-                        <h4 class="mb-5 text-center text-primary">Admin Login</h4>
+                        
+                            <div class="logo-center" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                                <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk" style="height: 150px;width: 150px;">
+                            </div>
+                    
+                        
+                        <h4 class="mb-3 mt-2 text-center text-primary">Admin Login</h4>
                         @if (Session::get('fail'))
                             <div class="alert alert-danger">
                                 {{ Session::get('fail') }}
@@ -29,8 +45,8 @@
                         <div class="row">
                             <div class="mb-3 col-md-12">
                                 <label>phonenumber<span class="text-danger">*</span></label>
-                                <input type="text" name="phonenumber" class="form-control"
-                                    placeholder="Enter Phone number" value="{{ old('phonenumber') }}">
+                                <input type="number" name="phonenumber" class="form-control"
+                                    placeholder="Enter Phone number" value="{{ old('phonenumber') }}" required>
                                 <span class="text-danger">
                                     @error('phonenumber')
                                         {{ $message }}
@@ -41,7 +57,7 @@
                             <div class="mb-3 col-md-12">
                                 <label>Password<span class="text-danger">*</span></label>
                                 <input type="password" name="password" class="form-control"
-                                    placeholder="Enter Password">
+                                    placeholder="Enter Password" required>
                                 <span class="text-danger">
                                     @error('password')
                                         {{ $message }}
