@@ -625,7 +625,7 @@ class BookController extends Controller
         public function AudioPage(){
 
             $UgandanSheikhs = Audio::select('First_name','sheikh_name')->distinct()->get();
-
+            
             return view('Audio.UgandanAudios',compact(['UgandanSheikhs']));
         }
 
@@ -678,9 +678,29 @@ class BookController extends Controller
 
      public function SheikhLectures($name){
 
-        $SheikhAudios = Audio::where('First_name',$name)->get();
+        $sheikhId = Sheikh::where('Firstname',$name)->value('id');
+        $sheikhFullname = Sheikh::where('Firstname',$name)->value('Fullname');
+        $SheikhSeries = Audio::select('serie_id')->where('sheikh_id',$sheikhId)->distinct()->get();
 
-        return view('Audio.IndvidualSheikh')->with('name',$name)->with('SheikhAudios',$SheikhAudios);
+        $Serienames =[];
+        
+        foreach ($SheikhSeries as $key => $seriename) {
+           $Serienames [] = DB::table('series')->select('serieId','serieName')->where('serieId',$seriename->serie_id)->first();
+        }
+
+        return view('Audio.IndvidualSheikhSeries', compact(['Serienames','sheikhFullname','name','sheikhId']));
+     }
+
+
+     public function SheikhLecturesSeries($sheikhId,$serieId){
+
+        $name = Sheikh::where('id',$sheikhId)->value('Firstname');
+        $Seriename = Serie::where('serieId',$serieId)->value('serieName');
+        $SheikhAudios = Audio::where('sheikh_id',$sheikhId)
+                              ->where('serie_id',$serieId)->get();
+
+        return view('Audio.IndvidualSheikh', compact(['Seriename','name','SheikhAudios']));
+        
      }
 
      public function downloadAudio(Request $request,$audio){

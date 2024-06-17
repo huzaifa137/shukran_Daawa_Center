@@ -121,6 +121,8 @@ Route::get('Indvidual-Sheikh', [BookController::class, 'IndividualSheikh'])->nam
 Route::get('sheikh/{name}', [BookController::class, 'SheikhLectures']);
 Route::get('/download-Audio/{file}', [BookController::class, 'downloadAudio']);
 
+Route::get('SheikhLecturesSeries/{sheikhId}/{SerieId}',[BookController::class,'SheikhLecturesSeries']);
+
 Route::post('Audio-Upload', [BookController::class, 'UploadAudio'])->name('Audio-Upload');
 Route::post('update-Audio', [BookController::class, 'UpdateAudio'])->name('update-Audio');
 

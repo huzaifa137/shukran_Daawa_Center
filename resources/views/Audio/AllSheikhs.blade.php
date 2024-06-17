@@ -38,14 +38,16 @@
 									<table id="example3" class="display" style="min-width: 845px">
 										<thead>
 											<tr>
+												<th>No</th>
 												<th>Fullname</th>
 												<th>Firstname</th>
 												<th>Edit</th>
 											</tr>
 										</thead>
 										<tbody>
-											@foreach ($data as $info)
+											@foreach ($data as $key => $info)
 											<tr>
+												<td>{{$key+1}}.</td>
 												<td>{{$info->Firstname}}</td>
 												<td>{{$info->Fullname}}</td>
 												<td>

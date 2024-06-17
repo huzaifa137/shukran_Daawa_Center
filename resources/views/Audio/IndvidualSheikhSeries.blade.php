@@ -130,16 +130,16 @@
             <div class="container">
                 <div class="row">
 
-                    @foreach ($SheikhAudios as $SheikhAudio)
+                    @foreach ($Serienames as $SheikhSerie)
                     @endforeach
                     <div class="col-lg-12 col-12">
                         <div class="text-center mb-5 pb-2">
-                            <h1 class="text-white">Listen to Sheikh {{ $SheikhAudio->sheikh_name }} Islamic Lectures
-                            </h1>
+                            <h1 class="text-white">Listen to Sheikh {{ $sheikhFullname }} Islamic Lectures</h1>
                         </div>
                         <div class="owl-carousel owl-theme">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -151,57 +151,51 @@
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Sheikh {{ $SheikhAudio->sheikh_name }} Lectures</h4>
+                            <h4 class="section-title">Sheikh {{ $sheikhFullname }} Lectures</h4>
                         </div>
                     </div>
 
-                    <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5" style="text-align: center;">
-                            <h4 class="section-title"><span style="color: green">Serie :</span> <strong> <span style="color: var(--primary-color);">{{ $Seriename }}</span></strong></h4>
-                        </div>
+
+                    <div class="col-lg-12 col-12" style="text-align: center;">
+                        <h4 class="section-title text-center">Series</h4>
                     </div>
 
-                    @foreach ($SheikhAudios as $SheikhAudio)
+                    @foreach ($Serienames as $SheikhSerie)
                         <div class="col-lg-4 col-12 mb-4 mb-lg-0 mt-3">
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
-                                    <a href="javascript:void();">
-                                        <img src="/audio_assets/images/podcast/27376480_7326766.jpg"
+                                    <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
+                                        <img src="/audio_assets/images/podcast/serie_bg.jpg"
                                             class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
 
-                                <div class="mt-4">
-                                    <audio controls>
-                                        <source src="{{ url('/audioz/' . $SheikhAudio->audio) }}" type="audio/ogg">
-                                        <source src="{{ url('/audioz/' . $SheikhAudio->audio) }}" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </div>
 
                                 <div class="custom-block-info">
                                     <h5 class="mb-0">
-                                        <a href="javascript:void();">
+                                        <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
                                             Sheikh:{{ $name }}
                                         </a>
                                     </h5>
-
-                                    <p class="mt-1" style="color:#000;"><strong>Topic :
-                                            {{ $SheikhAudio->topic }}</strong></p>
-
-                                    <div class="custom-block-bottom d-flex justify-content-between mt-1">
-                                        <a href="{{ url('/download-Audio', $SheikhAudio->audio) }}"
-                                            class="bi-download me-1">
-                                            <span style="text-transform: capitalize;color:red">Download Audio</span>
+                                    <div style="text-align: center!important;" class="mt-2">
+                                        <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}"> <strong><span style="color:green;">Serie Name</span></strong>
                                         </a>
                                     </div>
-                                </div>
 
-                                <div class="social-share d-flex flex-column ms-auto">
+                                    <p class="mt-2" style="color:#000;text-align:center;"><a
+                                            href=""><strong><span
+                                                    style="color: black;">{{ $SheikhSerie->serieName }}</span></strong></a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     @endforeach
+
+                    {{-- <div class="col-lg-12 col-12">
+                        <div class="section-title-wrap mb-5 mt-5" style="text-align: center;">
+                            <h4 class="section-title"> All Lectures</h4>
+                        </div>
+                    </div> --}}
 
                 </div>
             </div>

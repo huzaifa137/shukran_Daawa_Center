@@ -31,7 +31,7 @@
 						<div class="card">
 							<div class="card-header">
 								<h4 class="card-title">All User Information  </h4>
-								<a href="{{route('auth.register')}}" class="btn btn-primary">+ Add new</a>
+								<a href="{{route('auth.register')}}" class="btn btn-primary">+ Add User</a>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
