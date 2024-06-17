@@ -15,6 +15,7 @@ use App\Models\Audio;
 use App\Models\video;
 use App\Models\Quran;
 use App\Models\Admin;
+use App\Models\Serie;
 use App\Models\Book;
 use Carbon\Carbon;
 
@@ -638,7 +639,9 @@ class BookController extends Controller
         public function AudioUpload(){
 
             $all_sheikhs = sheikh::all();
-            return view('Audio.UploadAudio',compact(['all_sheikhs']));
+            $all_series =  Serie::all();
+
+            return view('Audio.UploadAudio',compact(['all_sheikhs','all_series']));
         }
 
 
@@ -656,7 +659,7 @@ class BookController extends Controller
         $post->sheikh_name=$request->sheikh_name;
         $post->topic=$request->topic;
         $post->sheikh_id=$sheikh_id;
-
+        $post->serie_id = $request->serie_name;
 
         //Storing an Audio
         $file=$request->audio;
@@ -1099,4 +1102,143 @@ class BookController extends Controller
             return redirect('All-Sheikhs')->with('success','Sheikh Information has been updated successfully');
         }
 
+
+    public function userInformation()
+    {
+        $users = Admin::all();
+
+        $data=['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+
+        return view('Adminpages.user-information',compact(['data','users']));
+    }
+
+    public function editUser($id)
+    {
+        $userRecord = Admin::find($id);
+
+        $data=['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+
+        return view('Adminpages.edit-user-information',compact(['data','userRecord']));
+    }
+
+    public function updateUserData(Request $request)
+    {
+        $userrecord = $request->userId;
+
+        $post = Admin::find($userrecord);
+        
+        $post->fname = $request->fname;
+        $post->email = $request->email;
+        $post->phonenumber = $request->phonenumber;
+        $post->save();
+
+        return redirect('user-information')->with('success','User Information has been updated successfully');
+    }
+
+    public function deleteUser($id)
+    {
+
+        $userSession = Session('LoggedUser');
+        $userRight = DB::table('Admins')->where('id',$userSession)->value('userRight');
+
+        if($userRight != 10)
+        {
+            return back()->with('success',"Error, you don't have the right to delete this user");
+        }
+
+        $userRecord = Admin::find($id);
+        $recordInfoDelete = $userRecord->userRight;
+
+        if($recordInfoDelete == 10)
+        {
+            return back()->with('success',"Error, Main Admins can not be deleted");
+        }
+
+        $userRecord->delete();
+
+        return back()->with('success','UserRecord has been deleted successfully');
+    }
+
+    public function activateUser($id)
+    {
+
+        $userSession = Session('LoggedUser');
+        $userRight = DB::table('Admins')->where('id',$userSession)->value('userRight');
+
+        if($userRight != 10)
+        {
+            return back()->with('success',"Error, you don't have the right to activate this user");
+        }
+
+        $post = Admin::find($id);
+
+        $post->status = 'valid';
+        $post->userRight = 1;
+        $post->save();
+
+        return back()->with('success',"User Account has been activated successfully");
+    }
+
+    public function AddSerie()
+    {
+        $data=['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+
+        return view('Audio.AddSerie');
+    }
+
+    public function storeSerieCreated(Request $request)
+    {
+        $random_number_reference = rand(10000, 99999);
+        $DateCreated = date('y-m-d-H:i:s');
+
+        $SerieId = $DateCreated.''.$random_number_reference;
+        $SerieName = $request->serie_name;
+
+        $post = new Serie;
+
+        $post->serieId = $SerieId;
+        $post->serieName = $SerieName;
+        $post->save();
+
+        return redirect('All-Series')->with('success','New serie has been created successfully');
+
+    }
+
+    public function AllSeries()
+    {
+
+        $AllSeries = Serie::all();
+        $data=['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+
+        return view('Audio.AllSeries', compact(['AllSeries']));
+    }
+
+    public function editSerie($id)
+    {
+
+        $serieRecord = Serie::find($id);
+        $data=['LoggedUserInfo'=>Admin::where('id','=',session('LoggedUser'))->first()];
+
+        return view('Audio.EditSerie', compact(['serieRecord']));
+    }
+
+    public function deleteSerie($id)
+    {
+        
+        $serieRecord = Serie::find($id);
+        $serieRecord->delete();
+
+        return redirect('All-Series')->with('success','Serie has been deleted successfully');
+    }
+
+    public function updateSerieDate(Request $request)
+    {
+
+        $post = Serie::find($request->record_id);
+
+        $post->serieName = $request->serie_name;
+        $post->save();
+
+        return redirect('All-Series')->with('success','Serie has been updated successfully');
+    }
 }

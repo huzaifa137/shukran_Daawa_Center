@@ -20,6 +20,7 @@ class CreateAdminsTable extends Migration
             $table->text('phonenumber');
             $table->text('status')->default('invalid');
             $table->text('password');
+            $table->integer('userRight')->default(0);
         });
     }
 

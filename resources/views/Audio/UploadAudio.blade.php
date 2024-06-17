@@ -69,8 +69,27 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <div class="form-group fallback w-100">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="form-label">Series</label>
+                                            <select class="form-control" name="serie_name" id="serie_name" value="{{ old('serie_name') }}"
+                                                required>
+                                                <option value="">---Select Serie ---</option>
+                                                <option value="default_0">0. Lecture has no serie </option>
+                                                @foreach ($all_series as $key => $serie_name)
+                                                    <option value="{{ $serie_name->serieId }}">{{$key+1}}. {{ $serie_name->serieName }}</option>
+                                                 @endforeach
+                                            </select>
+                                            <span style="color: red">
+                                                @error('sheikh_name')
+                                                    {{ $message }}
+                                                @enderror
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group" style="margin-top: 2.5rem;">
                                             <strong>Upload Audio :</strong> <input type="file" name="audio"
                                                 class="dropify" data-default-file="" value="{{ old('audio') }}" required>
                                             <span style="color: red">
