@@ -50,7 +50,18 @@
                         </div>
 					</div>
 
+                    {{$info->links()}}
+
                     @endforeach
+
+
+                    <style>
+                        .w-5{
+                            display: none;
+                        }
+                    </style>
+
+                    
                 </div>
             </div>
         </div> 

@@ -78,63 +78,7 @@
         <!-- End: Blog Section -->
 
         <!-- Start: Social Network -->
-        <section class="social-network section-padding">
-            <div class="container">
-                <div class="center-content">
-                    <h2 class="section-title">Follow Us</h2>
-                    <span class="underline center"></span>
-                    <p class="lead">We upload islamic content on the most popular social media platforms, follow us to access them freely.</p>
-                </div>
-                <ul>
-                    <li>
-                        <a class="linkedin" href="https://www.facebook.com/TaqwaLibrary123" target="_blank">
-                            <span>
-                                <i class="fa fa-facebook-f"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="youtube" href="https://www.tiktok.com/@taqwa_library" target="_blank">
-                            <span>
-                                <i class="fa-brands fa-tiktok"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="linkedin" href="https://www.youtube.com/channel/UCbBl171lNYsem6LpWtWjHbw" target="_blank">
-                            <span>
-                                <i class="fa fa-youtube"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="youtube" href="https://www.instagram.com/taqwa_library_official/" target="_blank">
-                            <span>
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="linkedin" href="javascript:void()">
-                            <span>
-                                <i class="fa fa-linkedin"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="youtube" href="javascript:void()">
-                            <span>
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        @include('include.social_media_handles')
         <!-- End: Social Network -->
 
 @endsection

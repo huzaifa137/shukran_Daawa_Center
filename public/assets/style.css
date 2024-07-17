@@ -19324,5 +19324,79 @@ td{
     }
  }
 
+ .social-network ul li a.telegram {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.social-network ul li a:hover.telegram i {
+  color: #FFF; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li a.telegram {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li:hover a.telegram span i {
+  color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a.telegram {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a:hover.telegram i {
+  color: #0088cc; /* Telegram brand color */
+}
+
+/* whatsapp social media handle  */
+
+
+.social-network ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.social-network ul li a:hover.whatsapp i {
+  color: #FFF; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li:hover a.whatsapp span i {
+  color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a:hover.whatsapp i {
+  color: #0088cc; /* Telegram brand color */
+}
+
+.social-network ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.social-network ul li a:hover.whatsapp i {
+  color: #FFF; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.fullwidth-social-icons ul li:hover a.whatsapp span i {
+  color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a.whatsapp {
+  background-color: #0088cc; /* Telegram brand color */
+}
+
+.layout-v2 .site-footer .widget_social_icons ul li a:hover.whatsapp i {
+  color: #0088cc; /* Telegram brand color */
+}
 
 

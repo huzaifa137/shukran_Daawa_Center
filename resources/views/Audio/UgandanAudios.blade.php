@@ -23,9 +23,9 @@
 
     <link rel="stylesheet" href="/audio_assets/css/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="/audio_assets/css/owl.carousel.min.css"> 
+    <link rel="stylesheet" href="/audio_assets/css/owl.carousel.min.css">
 
-   <link rel="stylesheet" href="/audio_assets/css/owl.theme.default.min.css">  
+    <link rel="stylesheet" href="/audio_assets/css/owl.theme.default.min.css">
 
     <link href="/audio_assets/css/templatemo-pod-talk.css" rel="stylesheet">
 
@@ -34,19 +34,21 @@
 </head>
 
 <body>
- 
+
     <main>
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand me-lg-5 me-0" class="logo_design" href="{{route('home')}}">
-                    <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                <a class="navbar-brand me-lg-5 me-0" class="logo_design" href="{{ route('home') }}">
+                    <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid"
+                        alt="templatemo pod talk">
                 </a>
 
-                <form action="javascript:void();" method="get" enctype="multipart/form-data" class="custom-form search-form flex-fill me-3" role="search">
+                <form action="javascript:void();" method="get" enctype="multipart/form-data"
+                    class="custom-form search-form flex-fill me-3" role="search">
                     <div class="input-group input-group-lg">
-                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast"
-                            aria-label="Search">
+                        <input name="search" type="search" class="form-control" id="search"
+                            placeholder="Search Islamic lecture" aria-label="Search">
 
                         <button type="submit" class="form-control" id="submit">
                             <i class="bi-search"></i>
@@ -62,52 +64,57 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('home')}}">Home</a>
+                            <a class="nav-link active" href="{{ route('home') }}">Home</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">BOOKS</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">BOOKS</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{route('all')}}">All Books</a></li>
-                                <li><a class="dropdown-item" href="{{route('All_Arabic_Books')}}">Arabic Books</a></li>
-                                <li><a class="dropdown-item" href="{{route('All_English_Books')}}">English Books</a></li>
-                                <li><a class="dropdown-item" href="{{route('All_Luganda_Books')}}">Luganda Books</a></li>
+                                <li><a class="dropdown-item" href="{{ route('all') }}">All Books</a></li>
+                                <li><a class="dropdown-item" href="{{ route('All_Arabic_Books') }}">Arabic Books</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('All_English_Books') }}">English Books</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ route('All_Luganda_Books') }}">Luganda Books</a>
+                                </li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Audios</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Audios</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a  class="dropdown-item" href="{{route('Ugandan-Sheikhs')}}">Ugandan Sheikhs</a></li>
+                                <li><a class="dropdown-item" href="{{ route('Ugandan-Sheikhs') }}">Ugandan Sheikhs</a>
+                                </li>
                                 {{-- <li><a class="dropdown-item" href="javascript:void()">International Sheikhs</a></li> --}}
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Videos</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Videos</a>
 
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{route('All-videos')}}">Arabic Sheikhs</a></li>
-                                <li><a  class="dropdown-item" href="javascript:void(0);">Ugandan Sheikhs</a></li>
-                                <li><a  class="dropdown-item" href="javascript:void(0);">English Sheikh</a></li>
+                            <ul class="dropdown-menu dropdown-menu-light"
+                                aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="{{ route('All-videos') }}">Arabic Sheikhs</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Ugandan Sheikhs</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">English Sheikh</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('about-us')}}">About us</a>
+                            <a class="nav-link" href="{{ route('about-us') }}">About us</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('contact')}}">Contact</a>
+                            <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         </li>
                     </ul>
 
-                    
+
                 </div>
             </div>
         </nav>
@@ -126,7 +133,7 @@
             </div>
         </section>
 
-        
+
 
         <section class="trending-podcast-section section-padding">
             <div class="container">
@@ -139,36 +146,37 @@
                     </div>
 
                     @foreach ($UgandanSheikhs as $UgandanSheikh)
-                    <div class="col-lg-4 col-12 mt-4 mb-lg-0">
-                        <div class="custom-block custom-block-full">
-                            <div class="custom-block-image-wrap">
-                                
-                                <a href="{{'sheikh/'.$UgandanSheikh->First_name}}">
-                                    <img src="/audio_assets/images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid"
-                                        alt="">
-                                </a>
-                            </div>
+                        <div class="col-lg-4 col-12 mt-4 mb-lg-0">
+                            <div class="custom-block custom-block-full">
+                                <div class="custom-block-image-wrap">
 
-                            <div class="custom-block-info">
-                                <h5 class="mb-2">
-                                    <a href="{{'sheikh/'.$UgandanSheikh->First_name}}">
-                                        Sheikh:{{$UgandanSheikh->First_name}} 
-                                    </a>
-                                </h5>
-
-                                <p class="mb-0" style="color:#000;"><strong>{{$UgandanSheikh->sheikh_name}}</strong></p>
-
-                                <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                    <a href="#" class="bi-headphones me-1">
-                                        <span style="text-transform: capitalize;">50+ Audios</span>
+                                    <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">
+                                        <img src="/audio_assets/images/podcast/27670664_7369753.jpg"
+                                            class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
-                            </div>
 
-                            <div class="social-share d-flex flex-column ms-auto">
+                                <div class="custom-block-info">
+                                    <h5 class="mb-2">
+                                        <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">
+                                            Sheikh:{{ $UgandanSheikh->First_name }}
+                                        </a>
+                                    </h5>
+
+                                    <p class="mb-0" style="color:#000;">
+                                        <strong>{{ $UgandanSheikh->sheikh_name }}</strong></p>
+
+                                    <div class="custom-block-bottom d-flex justify-content-between mt-3">
+                                        <a href="#" class="bi-headphones me-1">
+                                            <span style="text-transform: capitalize;">50+ Audios</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex flex-column ms-auto">
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
 
                 </div>
@@ -179,98 +187,105 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
-    
+
                     <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                         <div class="subscribe-form-wrap">
                             <h6>Bring back the love of Sunnah</h6>
                         </div>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
                         <h6 class="site-footer-title mb-3">Contact</h6>
-    
-                        <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> + 256-700574979</p>
-    
+
+                        <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> + 256704261823</p>
+
                         <p>
-                            <strong class="d-inline me-2">Email:</strong>
-                            <a href="javascprit:void();">info@taqwalibrary.me</a>
+                            {{-- <strong class="d-inline me-2">Email:</strong> --}}
+                            <a href="javascprit:void();">info@sunnahislammedia.com</a>
                         </p>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-6 col-12">
                         <h6 class="site-footer-title mb-3">Download Mobile</h6>
-    
+
                         <div class="site-footer-thumb mb-4 pb-2">
                             <div class="d-flex flex-wrap">
                                 <a href="javascript:void();">
-                                    <img src="/audio_assets/images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
+                                    <img src="/audio_assets/images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid"
+                                        alt="">
                                 </a>
-    
+
                                 <a href="javascript:void();">
                                     <img src="/audio_assets/images/play-store.png" class="img-fluid" alt="">
                                 </a>
                             </div>
                         </div>
-    
+
                         <h6 class="site-footer-title mb-3">Social</h6>
-    
+
                         <ul class="social-icon">
                             <li class="social-icon-item">
-                                <a target="_blank" href="https://www.instagram.com/taqwa_library_official/" class="social-icon-link bi-instagram"></a>
-                            </li>
-    
-                            <li class="social-icon-item">
-                                <a target="_blank" href="https://www.tiktok.com/@taqwa_library" class="social-icon-link bi-tiktok"></a>
-                            </li>
-    
-                            <li class="social-icon-item">
-                                <a target="_blank" href="https://www.youtube.com/channel/UCbBl171lNYsem6LpWtWjHbw" class="social-icon-link bi-youtube"></a>
+                                <a target="_blank" href="https://t.me/+SxnO4U4DtCoYuYPf"
+                                    class="social-icon-link bi-telegram"></a>
                             </li>
 
                             <li class="social-icon-item">
-                                <a target="_blank" href="https://www.facebook.com/TaqwaLibrary123" class="social-icon-link bi-facebook"></a>
+                                <a target="_blank" href="https://vm.tiktok.com/ZMNCYhARQ/"
+                                    class="social-icon-link bi-tiktok"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a target="_blank" href="https://www.youtube.com/@MatovuFatah"
+                                    class="social-icon-link bi-youtube"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a target="_blank"
+                                    href="https://www.facebook.com/Sunnah-Islam-Media-Uganda-107938975223426/"
+                                    class="social-icon-link bi-facebook"></a>
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
             </div>
-    
+
             <div class="container pt-5">
                 <div class="row align-items-center">
-    
+
                     <div class="col-lg-2 col-md-3 col-12">
-                        <a class="navbar-brand" href="{{route('home')}}">
-                            <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+                        <a class="navbar-brand" href="{{ route('home') }}">
+                            <img src="/audio_assets/images/pod-talk-logo.png" class="logo-image img-fluid"
+                                alt="templatemo pod talk">
                         </a>
                     </div>
-    
+
                     <div class="col-lg-7 col-md-9 col-12">
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
-                                <a href="{{route('home')}}" class="site-footer-link">Home</a>
-                            </li>
-    
-                            <li class="site-footer-link-item">
-                                <a href="{{route('all')}}" class="site-footer-link">Books</a>
+                                <a href="{{ route('home') }}" class="site-footer-link">Home</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="{{route('All-videos')}}" class="site-footer-link">Videos</a>
+                                <a href="{{ route('all') }}" class="site-footer-link">Books</a>
                             </li>
-    
+
                             <li class="site-footer-link-item">
-                                <a href="{{route('morning-adhkar')}}" class="site-footer-link">Dua & Adhkar</a>
+                                <a href="{{ route('All-videos') }}" class="site-footer-link">Videos</a>
                             </li>
-    
+
                             <li class="site-footer-link-item">
-                                <a href="{{route('contact')}}" class="site-footer-link">Contact Us</a>
+                                <a href="{{ route('morning-adhkar') }}" class="site-footer-link">Dua & Adhkar</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="{{ route('contact') }}" class="site-footer-link">Contact Us</a>
                             </li>
                         </ul>
                     </div>
-    
+
                     <div class="col-lg-3 col-12">
-                        <p class="copyright-text mb-0">Copyright © 2023 Sunnah Islam Media</p> 
+                        <p class="copyright-text mb-0">Copyright © 2023 Sunnah Islam Media</p>
                     </div>
                 </div>
             </div>
@@ -280,7 +295,7 @@
 
 
 
-   
+
 
 
     <!-- JAVASCRIPT FILES -->

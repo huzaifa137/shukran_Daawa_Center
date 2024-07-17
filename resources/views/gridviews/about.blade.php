@@ -267,7 +267,7 @@
                                                             <span class="underline left"></span>
                                                             <p style="text-align: justify">This site may contain images, books, audio and video content delivered to our audience. Some of these maybe copyrighted materials the use of which has not been specifically authorized by the copyright owners.</p>
                                                             <p style="text-align: justify">Sunnah Islam Media is making such material available in our effort to advance understanding of Islam and Prophetic teachings among the Muslim brothers and sisters we do not own nor create some of this content.</p>
-                                                            <p style="text-align: justify">We do believe this constitutes a "Fair Use" of any such copyrighted material however would you wish to have any of your work removed from our site, please inform us and we will remove it immediately. Provide legal proof of your right to demand removal. If verified, the material will be removed immediately. Feel free to email us at <span><a href="mailto:Taqwalibrary123@gmail.com">Taqwalibrary123@gmail.com</a></span>  to raise your complaint.</p>
+                                                            <p style="text-align: justify">We do believe this constitutes a "Fair Use" of any such copyrighted material however would you wish to have any of your work removed from our site, please inform us and we will remove it immediately. Provide legal proof of your right to demand removal. If verified, the material will be removed immediately. Feel free to email us at <span><a href="mailto:info@sunnahislammedia.com">info@sunnahislammedia.com</a></span>  to raise your complaint.</p>
                                                             <b><p style="text-align: justify">All credits go to their rightful owners.</p></b>
                                                             <a href="javascript:void()" class="btn btn-dark-gray">Donate</a>
                                                         </div>
@@ -426,63 +426,7 @@
         <!-- End: Services Section -->
         
         <!-- Start: Social Network -->
-        <section class="social-network section-padding">
-            <div class="container">
-                <div class="center-content">
-                    <h2 class="section-title">Follow Us</h2>
-                    <span class="underline center"></span>
-                    <p class="lead">We upload islamic content on the most popular social media platforms, follow us to access them freely.</p>
-                </div>
-                <ul>
-                    <li>
-                        <a class="linkedin" href="https://www.facebook.com/TaqwaLibrary123" target="_blank">
-                            <span>
-                                <i class="fa fa-facebook-f"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="youtube" href="https://www.tiktok.com/@taqwa_library" target="_blank">
-                            <span>
-                                <i class="fa-brands fa-tiktok"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="linkedin" href="https://www.youtube.com/channel/UCbBl171lNYsem6LpWtWjHbw" target="_blank">
-                            <span>
-                                <i class="fa fa-youtube"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="youtube" href="https://www.instagram.com/taqwa_library_official/" target="_blank">
-                            <span>
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="linkedin" href="javascript:void()">
-                            <span>
-                                <i class="fa fa-linkedin"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="youtube" href="javascript:void()">
-                            <span>
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        @include('include.social_media_handles')
         <!-- End: Social Network -->
         
 @endsection

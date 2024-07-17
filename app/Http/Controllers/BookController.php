@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Stroage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Hash;
@@ -324,33 +326,34 @@ class BookController extends Controller
 
         public function contact_info()
         {
-             $info = DB::table('contacts')->orderByDesc('id')->get();
+             $info = DB::table('contacts')->orderByDesc('id')->paginate(2);
+
+
              return view('Adminpages.info_contact',compact(['info']));
         }
 
         public function SendMessage(Request $request)
         {
+
             $request->validate([
                 'firstname'=>'required',
                 'lastname'=>'required',
-                'email'=>'required|email',
+                'email'=>'required',
                 'phonenumber'=>'required'
             ]);
-
             
             $post = new contact();
+
             $post->FirstName=$request->firstname;
             $post->LastName=$request->lastname;
             $post->Email=$request->email;
             $post->PhoneNumber=$request->phonenumber;
             $post->Message=$request->message;
+          
+            $post->save();
 
-            $save = $post->save();
-            
-            if($save)
-            {     
-                return redirect()->back()->with('success','Information has been delivered');
-            }
+           return redirect()->back()->with('success','Message has been sent to Sunnah Islam Media');
+
         }
 
         public function fetchRecords($value)
@@ -674,6 +677,9 @@ class BookController extends Controller
             return redirect()->back()->with('success','Audio has been Added successfully');
             
         }
+
+
+
      }
 
      public function SheikhLectures($name){

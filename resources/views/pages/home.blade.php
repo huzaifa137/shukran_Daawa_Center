@@ -789,15 +789,15 @@
                         <address>
                             <div class="info">
                                 <i class="fa fa-location-arrow"></i>
-                                <span>Coral Close, Kampala, Uganda</span>
+                                <span>Kisenyi two, Mengo</span>
                             </div>
                             <div class="info">
                                 <i class="fa fa-envelope"></i>
-                                <span><a href="mailto:info@taqwalibrary.me">info@taqwalibrary.me</a></span>
+                                <span><a href="mailto:info@sunnahislammedia.com">info@sunnahislammedia.com</a></span>
                             </div>
                             <div class="info">
                                 <i class="fa fa-phone"></i>
-                                <span><a href="tel:+256700574979">+ 256-700574979</a></span>
+                                <span><a href="tel:+256704261823">+ 256704261823</a></span>
                             </div>
                         </address>
                     </div>

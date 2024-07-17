@@ -75,7 +75,7 @@
                                             <select class="form-control" name="serie_name" id="serie_name" value="{{ old('serie_name') }}"
                                                 required>
                                                 <option value="">---Select Serie ---</option>
-                                                <option value="default_0">0. Lecture has no serie </option>
+                                                <option value="default_0">0. Lectures without series </option>
                                                 @foreach ($all_series as $key => $serie_name)
                                                     <option value="{{ $serie_name->serieId }}">{{$key+1}}. {{ $serie_name->serieName }}</option>
                                                  @endforeach
