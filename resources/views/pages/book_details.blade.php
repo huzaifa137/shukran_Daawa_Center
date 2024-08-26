@@ -11,13 +11,13 @@
                             <div class="detailed-box">
                                 <div class="col-xs-12 col-sm-5 col-md-3">
                                     <div class="post-thumbnail">
-                                        <img class="image-format" id="pic_bd" src="{{'/public/BookImage/'.$data->Book_Image}}" >
+                                        <img class="image-format" id="pic_bd" src="{{'/public/public/BookImage/'.$data->Book_Image}}" >
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-7 col-md-6">
                                     <div class="post-center-content">
                                         <h2>{{$data->Book_Name}}</h2>
-                                        <p><strong>Author:</strong> Sheikh {{$data->Author_Name}}</p>
+                                        <p><strong>Author:</strong> {{$data->Author_Name}}</p>
                                         <p><strong>ISBN:</strong> 9781581573268</p>
                                         <p><strong>Rating:</strong> 10/10 </p>
                                         <p><strong>Edition:</strong> {{$data->Edition}}</p>

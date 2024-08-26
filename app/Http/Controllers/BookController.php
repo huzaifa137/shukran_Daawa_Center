@@ -677,25 +677,32 @@ class BookController extends Controller
             return redirect()->back()->with('success','Audio has been Added successfully');
             
         }
-
-
-
      }
 
-     public function SheikhLectures($name){
-
-        $sheikhId = Sheikh::where('Firstname',$name)->value('id');
-        $sheikhFullname = Sheikh::where('Firstname',$name)->value('Fullname');
-        $SheikhSeries = Audio::select('serie_id')->where('sheikh_id',$sheikhId)->distinct()->get();
-
-        $Serienames =[];
-        
-        foreach ($SheikhSeries as $key => $seriename) {
-           $Serienames [] = DB::table('series')->select('serieId','serieName')->where('serieId',$seriename->serie_id)->first();
+    
+    
+    public function SheikhLectures(Request $request, $name)
+    {
+        $sheikhId = Sheikh::where('Firstname', $name)->value('id');
+        $sheikhFullname = Sheikh::where('Firstname', $name)->value('Fullname');
+    
+        $SheikhSeries = Audio::select('serie_id')->where('sheikh_id', $sheikhId)->distinct()->get();
+    
+        $Serienames = [];
+         foreach ($SheikhSeries as $seriename) {
+            $seriesRecord = DB::table('series')
+                ->select('serieId', 'serieName')
+                ->where('serieId', $seriename->serie_id)
+                ->first();
+                
+            if ($seriesRecord) {
+                $Serienames[] = $seriesRecord;
+            }
         }
+    
+        return view('Audio.IndvidualSheikhSeries', compact(['Serienames', 'sheikhFullname', 'name', 'sheikhId']));
+    }
 
-        return view('Audio.IndvidualSheikhSeries', compact(['Serienames','sheikhFullname','name','sheikhId']));
-     }
 
 
      public function SheikhLecturesSeries($sheikhId,$serieId){

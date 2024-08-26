@@ -95,9 +95,9 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="{{route('morning-adhkar')}}">Morning Adhkar</a></li>
                                             <li><a href="{{route('evening-adhkar')}}">Evening Adhkar</a></li>
-                                            <li><a href="{{route('Adhkar-After-Swalah')}}">Adhkar after swalah</a></li>
-                                            <li><a href="{{route('Famous-Duas-from-the-Quran')}}">Famous Duas from the Quran</a></li>
-                                            <li><a href="{{route('Other-Duas')}}">Other Dua's</a></li>
+                                            <!--<li><a href="{{route('Adhkar-After-Swalah')}}">Adhkar after swalah</a></li>-->
+                                            <!--<li><a href="{{route('Famous-Duas-from-the-Quran')}}">Famous Duas from the Quran</a></li>-->
+                                            <!--<li><a href="{{route('Other-Duas')}}">Other Dua's</a></li>-->
                                         </ul>
                                     </li>
 
@@ -478,7 +478,7 @@
                     <div class="col-md-6">
                         <div class="welcome-wrap">
                             <div class="welcome-text">
-                              <h2 class="section-title"  >Welcome to SUNNAHH ISLAM MEDIA</h2>
+                              <h2 class="section-title"  >Welcome to SUNNAH ISLAM MEDIA</h2>
                                 <span class="underline left"></span>
                                 <p style="text-align:justify"> <b> Bismillaahi Rahmaan Raheem</b> – In the Name of Allāh, the Beneficent, the Merciful. <br> <br> Praise be to Allah سُبْحَانَهُۥ وَتَعَالَ, and the peace and blessings of Allah be upon the noble Messenger, his family, companions and those who follow them upon excellence till the day of judgement. <br> <br> Sunnah Islam Media has been created to disseminate authentic and beneficial knowledge from Salafi Scholars and Students based on the Blessed and Moderate Methodology of the Sahabah, Taabi’een and Atbaa’ At-Tabi’een. We reject all forms of extremism and religious fanaticism in the name of Salfiyah. We also reject speech from hasty youth who are causing divisions among Salafi communities and rejecting advice of the Scholars. We love and respect our Noble Scholars, past and present, for the sake of Allah سُبْحَانَهُۥ وَتَعَالَ, Who blessed them with knowledge of His Book and Sunnah of the Prophet صلى الله عليه وسلم, and we shall continue to propagate their work, Insh'a Allah. <br>
                                   </p>
@@ -520,15 +520,6 @@
                     <span class="underline center"></span>
                     <p class="lead" id="hadith_intro">All the recently uploaded islamic-books and pdfs in different languages from Sunnah Islam Media collection are shown here.</p>
                 </div>
-                {{-- <div class="filter-buttons">
-                    <div class="filter btn" data-filter="all">All Releases</div>
-                    <div class="filter btn" data-filter=".adults">Adults</div>
-                    <div class="filter btn" data-filter=".kids-teens">Kids &amp; Teens</div>
-                    <div class="filter btn" data-filter=".video">Video</div>
-                    <div class="filter btn" data-filter=".audio">Audio</div>
-                    <div class="filter btn" data-filter=".books">Books</div>
-                    <div class="filter btn" data-filter=".magazines">Magazines</div>
-                </div> --}}
             </div>
 
             
@@ -537,7 +528,7 @@
                     @foreach ($new_release as $info)  
                     <li class="category-item adults">
                         <figure>
-                            <img class="image-size" id="pic_bd1" src="{{url('public/BookImage/'.$info->Book_Image)}}"  alt="New Releaase" />
+                            <img class="image-size" id="pic_bd1" src="{{url('/public/public/BookImage/'.$info->Book_Image)}}"  alt="New Releaase" />
                             <figcaption class="bg-blue">
                                 <div class="info-block">
                                     <h4>{{$info->Book_Name}}</h4>

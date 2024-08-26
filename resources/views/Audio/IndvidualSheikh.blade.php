@@ -45,15 +45,9 @@
                         alt="templatemo pod talk">
                 </a>
 
-                <form action="#" method="post" enctype="multipart/form-data"
-                    class="custom-form search-form flex-fill me-3" role="search">
+                <form class="custom-form search-form flex-fill me-3" role="search">
                     <div class="input-group input-group-lg">
-                        <input name="search" type="search" class="form-control" id="search"
-                            placeholder="Search Podcast" aria-label="Search">
-
-                        <button type="submit" class="form-control" id="submit">
-                            <i class="bi-search"></i>
-                        </button>
+                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Lectures " aria-label="Search" onkeyup="filterLectures()" style="display:none;">
                     </div>
                 </form>
 
@@ -134,7 +128,7 @@
                     @endforeach
                     <div class="col-lg-12 col-12">
                         <div class="text-center mb-5 pb-2">
-                            <h1 class="text-white">Listen to Sheikh {{ $SheikhAudio->sheikh_name }} Islamic Lectures
+                            <h1 class="text-white">Listen to {{ $SheikhAudio->sheikh_name }} Islamic Lectures
                             </h1>
                         </div>
                         <div class="owl-carousel owl-theme">
@@ -151,7 +145,7 @@
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Sheikh {{ $SheikhAudio->sheikh_name }} Lectures</h4>
+                            <h4 class="section-title">{{ $SheikhAudio->sheikh_name }} Lectures</h4>
                         </div>
                     </div>
 
@@ -324,6 +318,22 @@
     </footer>
 
 
+         <script>
+               function filterLectures() {
+                    const searchInput = document.getElementById('search').value.toLowerCase();
+                    const seriesItems = document.querySelectorAll('.series-item');
+                    
+                    seriesItems.forEach(function(series) {
+                        const topic = series.querySelector('strong > span').innerText.toLowerCase();
+                        if (topic.includes(searchInput)) {
+                            series.style.display = "block";
+                        } else {
+                            series.style.display = "none";
+                        }
+                    });
+                }
+            </script>
+    
     <!-- JAVASCRIPT FILES -->
     <script src="/audio_assets/js/jquery.min.js"></script>
     <script src="/audio_assets/js/bootstrap.bundle.min.js"></script>

@@ -8,7 +8,7 @@
                   @foreach ($data as $info)
                 <li>
                     <figure>
-                        <img class="image-size" src="{{'public/BookImage/'.$info->Book_Image}}" alt="Book">
+                        <img class="image-size" src="{{'/public/public/BookImage/'.$info->Book_Image}}" alt="Book">
                         <figcaption>
                             <p><strong>The Great Gatsby</strong></p>
                             <p><strong>Author:</strong>  F. Scott Fitzgerald</p>

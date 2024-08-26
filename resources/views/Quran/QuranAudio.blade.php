@@ -100,9 +100,9 @@
                                             <ul class="dropdown-menu">
                                                 <li><a href="{{route('morning-adhkar')}}">Morning Adhkar</a></li>
                                                 <li><a href="{{route('evening-adhkar')}}">Evening Adhkar</a></li>
-                                                <li><a href="{{route('Adhkar-After-Swalah')}}">Adhkar after swalah</a></li>
-                                                <li><a href="{{route('Famous-Duas-from-the-Quran')}}">Famous Duas from the Quran</a></li>
-                                                <li><a href="{{route('Other-Duas')}}">Other Dua's</a></li>
+                                                <!--<li><a href="{{route('Adhkar-After-Swalah')}}">Adhkar after swalah</a></li>-->
+                                                <!--<li><a href="{{route('Famous-Duas-from-the-Quran')}}">Famous Duas from the Quran</a></li>-->
+                                                <!--<li><a href="{{route('Other-Duas')}}">Other Dua's</a></li>-->
                                             </ul>
                                         </li>
                                         <li><a href="{{route('about-us')}}">About us</a></li>

@@ -1,4 +1,4 @@
-﻿@extends('layouts.header_footer_navbar')
+﻿﻿@extends('layouts.header_footer_navbar')
 @section('content')
 @include('include.message')
 

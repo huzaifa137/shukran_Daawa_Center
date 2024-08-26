@@ -52,7 +52,7 @@
                                                 <div class="post-thumbnail">
                                                     
                                                     <figure>
-                                                        <img id="img_id" id="img_id" alt="blog" src="{{url('public/Adhkar_image/'.$data->Adhkar_image)}}" />
+                                                        <img id="img_id" id="img_id" alt="blog" src="{{url('/public/public/Adhkar_image/'.$data->Adhkar_image)}}" />
                                                     </figure>
                                                 </div>
                                                 <div class="post-detail">

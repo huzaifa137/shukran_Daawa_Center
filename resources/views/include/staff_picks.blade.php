@@ -11,12 +11,12 @@
             @foreach ($data as $info)           
             <div class="team-member">
                 <figure>
-                    <img class="image-size" src="{{'/public/BookImage/'.$info->Book_Image}}" alt="Staff Pick" />
+                    <img class="image-size" src="{{'/public/public/BookImage/'.$info->Book_Image}}" alt="Staff Pick" />
                 </figure>
                 <div class="content-block">
                     <div class="member-info">
                         <div class="member-thumb">
-                            <img class="staff_pic_image" src="{{'/public/BookImage/'.$info->Book_Image}}" alt="Katherine">
+                            <img class="staff_pic_image" src="{{'/public/public/BookImage/'.$info->Book_Image}}" alt="Katherine">
                         </div>
                         <div class="member-content">
                             <span class="designation">{{$info->Author_Name}}</span>

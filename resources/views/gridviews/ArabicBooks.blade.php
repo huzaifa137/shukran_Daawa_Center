@@ -9,7 +9,7 @@
                   @foreach ($data as $info)
                 <li>
                     <figure>
-                        <img class="image-size" src="{{'public/BookImage/'.$info->Book_Image}}" alt="Book">
+                        <img class="image-size" src="{{'/public/public/BookImage/'.$info->Book_Image}}" alt="Book">
                         <figcaption>
                             <p><strong>{{$info->Book_Name}}</strong></p>
                             <p><strong>Author:</strong>  {{$info->Author_Name}}</p>

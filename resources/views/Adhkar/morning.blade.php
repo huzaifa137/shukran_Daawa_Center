@@ -41,7 +41,7 @@
                                     <article>
                                         <div class="grid-item blog-item">
                                             <div class="post-thumbnail">
-                                                <a href="{{'adhkar-details/'.$info->id}}"><img alt="blog" id="pic_bd" src="{{url('public/Adhkar_image/'.$info->Adhkar_image)}}" /></a>
+                                                <a href="{{'adhkar-details/'.$info->id}}"><img alt="blog" id="pic_bd" src="{{url('/public/public/Adhkar_image/'.$info->Adhkar_image)}}" /></a>
                                             </div>
                                             <div class="post-detail">
                                                 <header class="entry-header">

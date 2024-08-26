@@ -38,7 +38,8 @@
 									<table id="example3" class="display" style="min-width: 845px">
 										<thead>
 											<tr>
-												<th>Adkar Image</th>
+											    <th>No</th>
+												<!--<th>Adkar Image</th>-->
 												<th>Dua Name</th>
 												<th>Dua Catagory</th>
 												<th>Number in figures</th>
@@ -47,11 +48,13 @@
 											</tr>
 										</thead>
 										<tbody>
-											@foreach ($data as $info)
+											@foreach ($data as $key => $info)
 											<tr>
-												<div class="profile-photo">
-													<td><img src="{{url('public/Adhkar_image/'.$info->Adhkar_image)}}"  class="img-fluid rounded-circle"  alt="" width="60px"></td>
-												</div>
+												<!--<div class="profile-photo">-->
+												<!--	<td><img src="{{url('/public/public/Adhkar_image/'.$info->Adhkar_image)}}"  class="img-fluid rounded-circle"  alt="" width="60px"></td>-->
+												<!--</div>-->
+												
+												<td>{{$key+1}}</td>
 												<td>{{$info->dua_name}}</td>
 												<td>{{$info->dua_catagory}}</td>
 												<td>{{$info->number_in_figures}}</td>

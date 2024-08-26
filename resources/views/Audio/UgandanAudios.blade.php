@@ -44,18 +44,16 @@
                         alt="templatemo pod talk">
                 </a>
 
+            <!-- Search Bar -->
                 <form action="javascript:void();" method="get" enctype="multipart/form-data"
                     class="custom-form search-form flex-fill me-3" role="search">
                     <div class="input-group input-group-lg">
                         <input name="search" type="search" class="form-control" id="search"
-                            placeholder="Search Islamic lecture" aria-label="Search">
-
-                        <button type="submit" class="form-control" id="submit">
-                            <i class="bi-search"></i>
-                        </button>
+                            placeholder="Search Sheikhs by name" aria-label="Search">
                     </div>
                 </form>
-
+                
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -145,44 +143,90 @@
                         </div>
                     </div>
 
+                    <!--@foreach ($UgandanSheikhs as $UgandanSheikh)-->
+                    <!--    <div class="col-lg-4 col-12 mt-4 mb-lg-0">-->
+                    <!--        <div class="custom-block custom-block-full">-->
+                    <!--            <div class="custom-block-image-wrap">-->
+
+                    <!--                <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">-->
+                    <!--                    <img src="/audio_assets/images/podcast/27670664_7369753.jpg"-->
+                    <!--                        class="custom-block-image img-fluid" alt="">-->
+                    <!--                </a>-->
+                    <!--            </div>-->
+
+                    <!--            <div class="custom-block-info">-->
+                    <!--                <h5 class="mb-2">-->
+                    <!--                    <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">-->
+                    <!--                        Sheikh:{{ $UgandanSheikh->First_name }}-->
+                    <!--                    </a>-->
+                    <!--                </h5>-->
+
+                    <!--                <p class="mb-0" style="color:#000;">-->
+                    <!--                    <strong>{{ $UgandanSheikh->sheikh_name }}</strong></p>-->
+
+                    <!--                <div class="custom-block-bottom d-flex justify-content-between mt-3">-->
+                    <!--                    <a href="#" class="bi-headphones me-1">-->
+                    <!--                        <span style="text-transform: capitalize;">50+ Audios</span>-->
+                    <!--                    </a>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+
+                    <!--            <div class="social-share d-flex flex-column ms-auto">-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--@endforeach-->
+                    
+                    <div class="row" id="sheikhList">
                     @foreach ($UgandanSheikhs as $UgandanSheikh)
-                        <div class="col-lg-4 col-12 mt-4 mb-lg-0">
+                        <div class="col-lg-4 col-12 mt-4 mb-lg-0 sheikh-item">
                             <div class="custom-block custom-block-full">
                                 <div class="custom-block-image-wrap">
-
                                     <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">
                                         <img src="/audio_assets/images/podcast/27670664_7369753.jpg"
                                             class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
-
                                 <div class="custom-block-info">
                                     <h5 class="mb-2">
                                         <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">
-                                            Sheikh:{{ $UgandanSheikh->First_name }}
+                                            Sheikh: {{ $UgandanSheikh->First_name }}
                                         </a>
                                     </h5>
-
                                     <p class="mb-0" style="color:#000;">
                                         <strong>{{ $UgandanSheikh->sheikh_name }}</strong></p>
-
                                     <div class="custom-block-bottom d-flex justify-content-between mt-3">
                                         <a href="#" class="bi-headphones me-1">
                                             <span style="text-transform: capitalize;">50+ Audios</span>
                                         </a>
                                     </div>
                                 </div>
-
-                                <div class="social-share d-flex flex-column ms-auto">
-                                </div>
+                                <div class="social-share d-flex flex-column ms-auto"></div>
                             </div>
                         </div>
                     @endforeach
+                </div>
 
                 </div>
             </div>
         </section>
 
+
+        <script>
+            document.getElementById('search').addEventListener('input', function() {
+                const query = this.value.toLowerCase();
+                const items = document.querySelectorAll('#sheikhList .sheikh-item');
+        
+                items.forEach(item => {
+                    const name = item.querySelector('.custom-block-info h5 a').textContent.toLowerCase();
+                    if (name.includes(query)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        </script>
 
         <footer class="site-footer">
             <div class="container">

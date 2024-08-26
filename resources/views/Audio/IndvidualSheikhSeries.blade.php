@@ -11,7 +11,6 @@
     <title>..:: Sunnah Islam Media Audios ::..</title>
 
     <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -45,15 +44,10 @@
                         alt="templatemo pod talk">
                 </a>
 
-                <form action="#" method="post" enctype="multipart/form-data"
-                    class="custom-form search-form flex-fill me-3" role="search">
+                <!-- Search Bar for Sheikh Series -->
+                <form class="custom-form search-form flex-fill me-3" role="search">
                     <div class="input-group input-group-lg">
-                        <input name="search" type="search" class="form-control" id="search"
-                            placeholder="Search Podcast" aria-label="Search">
-
-                        <button type="submit" class="form-control" id="submit">
-                            <i class="bi-search"></i>
-                        </button>
+                        <input name="search" type="search" class="form-control" id="search" placeholder="Search Lectures " aria-label="Search" onkeyup="filterLectures()" style="display:none;">
                     </div>
                 </form>
 
@@ -134,7 +128,7 @@
                     @endforeach
                     <div class="col-lg-12 col-12">
                         <div class="text-center mb-5 pb-2">
-                            <h1 class="text-white">Listen to Sheikh {{ $sheikhFullname }} Islamic Lectures</h1>
+                            <h1 class="text-white">Listen to {{ $sheikhFullname }} Islamic Lectures</h1>
                         </div>
                         <div class="owl-carousel owl-theme">
                         </div>
@@ -145,61 +139,57 @@
         </section>
 
 
-        <section class="trending-podcast-section section-padding">
-            <div class="container">
-                <div class="row">
+<section class="trending-podcast-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="section-title-wrap mb-5">
+                    <h4 class="section-title"> {{ $sheikhFullname }} Lectures</h4>
+                </div>
+            </div>
 
-                    <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Sheikh {{ $sheikhFullname }} Lectures</h4>
-                        </div>
-                    </div>
+            <div class="col-lg-12 col-12" style="text-align: center;">
+                <h4 class="section-title text-center">Series</h4>
+            </div>
 
+            <!-- Series List Container -->
+            <div id="seriesList" class="row">  <!-- Added id="seriesList" -->
+                @foreach ($Serienames as $SheikhSerie)
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0 mt-3 series-item">  <!-- Added class="series-item" -->
+                        <div class="custom-block custom-block-full">
+                            <div class="custom-block-image-wrap">
+                                <a href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
+                                    <img src="/audio_assets/images/podcast/serie_bg.jpg"
+                                        class="custom-block-image img-fluid" alt="">
+                                </a>
+                            </div>
 
-                    <div class="col-lg-12 col-12" style="text-align: center;">
-                        <h4 class="section-title text-center">Series</h4>
-                    </div>
-
-                    @foreach ($Serienames as $SheikhSerie)
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0 mt-3">
-                            <div class="custom-block custom-block-full">
-                                <div class="custom-block-image-wrap">
-                                    <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
-                                        <img src="/audio_assets/images/podcast/serie_bg.jpg"
-                                            class="custom-block-image img-fluid" alt="">
+                            <div class="custom-block-info">
+                                <h5 class="mb-0">
+                                    <a href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
+                                        Sheikh: {{ $name }}
+                                    </a>
+                                </h5>
+                                <div style="text-align: center!important;" class="mt-2">
+                                    <a href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
+                                        <strong><span style="color:green;">Serie Name</span></strong>
                                     </a>
                                 </div>
 
-
-                                <div class="custom-block-info">
-                                    <h5 class="mb-0">
-                                        <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}">
-                                            Sheikh:{{ $name }}
-                                        </a>
-                                    </h5>
-                                    <div style="text-align: center!important;" class="mt-2">
-                                        <a  href="{{ url('SheikhLecturesSeries/' . $sheikhId . '/' . $SheikhSerie->serieId) }}"> <strong><span style="color:green;">Serie Name</span></strong>
-                                        </a>
-                                    </div>
-
-                                    <p class="mt-2" style="color:#000;text-align:center;"><a
-                                            href=""><strong><span
-                                                    style="color: black;">{{ $SheikhSerie->serieName }}</span></strong></a>
-                                    </p>
-                                </div>
+                                <p class="mt-2" style="color:#000; text-align:center;">
+                                    <a href="#">
+                                        <strong><span style="color: black;">{{ $SheikhSerie->serieName }}</span></strong>
+                                    </a>
+                                </p>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
+                @endforeach
+            </div> <!-- End of Series List Container -->
+        </div>
+    </div>
+</section>
 
-                    {{-- <div class="col-lg-12 col-12">
-                        <div class="section-title-wrap mb-5 mt-5" style="text-align: center;">
-                            <h4 class="section-title"> All Lectures</h4>
-                        </div>
-                    </div> --}}
-
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -232,7 +222,7 @@
 
                     <p>
                         <strong class="d-inline me-2">Email:</strong>
-                        <a href="javascprit:void();">info@taqwalibrary.me</a>
+                        <a href="javascprit:void();">info@sunnahislammedia.com</a>
                     </p>
                 </div>
 
@@ -316,6 +306,25 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        function filterLectures() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const seriesItems = document.querySelectorAll('.series-item');
+            
+            seriesItems.forEach(function(series) {
+                const topic = series.querySelector('strong > span').innerText.toLowerCase();
+                if (topic.includes(searchInput)) {
+                    series.style.display = "block";
+                } else {
+                    series.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+
 
 
     <!-- JAVASCRIPT FILES -->
