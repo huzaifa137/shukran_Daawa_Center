@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>..:: Sunnah Islam Media Audios ::..</title>
+    <title>..:: shukran Daawa Center Audios ::..</title>
 
     <!-- CSS FILES -->
 
@@ -149,7 +149,7 @@
             </div>
 
             <div class="col-lg-12 col-12" style="text-align: center;">
-                <h4 class="section-title text-center">Series</h4>
+                <h4 class="section-title" style="color:#F67402">Series</h4>
             </div>
 
             <!-- Series List Container -->
@@ -301,7 +301,7 @@
                 </div>
 
                 <div class="col-lg-3 col-12">
-                    <p class="copyright-text mb-0">Copyright © 2023 Sunnah Islam Media</p>
+                    <p class="copyright-text mb-0">Copyright © 2023 shukran Daawa Center</p>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>..:: Sunnah Islam Media ::..</title>
+    <title>..:: shukran Daawa Center ::..</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,43 +139,9 @@
 
                     <div class="col-lg-12 col-12">
                         <div class="section-title-wrap mb-5">
-                            <h4 class="section-title">Ugandan Sheikhs</h4>
+                            <h4 class="section-title" style="color: #F67402">Ugandan Sheikhs</h4>
                         </div>
                     </div>
-
-                    <!--@foreach ($UgandanSheikhs as $UgandanSheikh)-->
-                    <!--    <div class="col-lg-4 col-12 mt-4 mb-lg-0">-->
-                    <!--        <div class="custom-block custom-block-full">-->
-                    <!--            <div class="custom-block-image-wrap">-->
-
-                    <!--                <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">-->
-                    <!--                    <img src="/audio_assets/images/podcast/27670664_7369753.jpg"-->
-                    <!--                        class="custom-block-image img-fluid" alt="">-->
-                    <!--                </a>-->
-                    <!--            </div>-->
-
-                    <!--            <div class="custom-block-info">-->
-                    <!--                <h5 class="mb-2">-->
-                    <!--                    <a href="{{ 'sheikh/' . $UgandanSheikh->First_name }}">-->
-                    <!--                        Sheikh:{{ $UgandanSheikh->First_name }}-->
-                    <!--                    </a>-->
-                    <!--                </h5>-->
-
-                    <!--                <p class="mb-0" style="color:#000;">-->
-                    <!--                    <strong>{{ $UgandanSheikh->sheikh_name }}</strong></p>-->
-
-                    <!--                <div class="custom-block-bottom d-flex justify-content-between mt-3">-->
-                    <!--                    <a href="#" class="bi-headphones me-1">-->
-                    <!--                        <span style="text-transform: capitalize;">50+ Audios</span>-->
-                    <!--                    </a>-->
-                    <!--                </div>-->
-                    <!--            </div>-->
-
-                    <!--            <div class="social-share d-flex flex-column ms-auto">-->
-                    <!--            </div>-->
-                    <!--        </div>-->
-                    <!--    </div>-->
-                    <!--@endforeach-->
                     
                     <div class="row" id="sheikhList">
                     @foreach ($UgandanSheikhs as $UgandanSheikh)
@@ -329,7 +295,7 @@
                     </div>
 
                     <div class="col-lg-3 col-12">
-                        <p class="copyright-text mb-0">Copyright © 2023 Sunnah Islam Media</p>
+                        <p class="copyright-text mb-0">Copyright © 2023 shukran Daawa Center</p>
                     </div>
                 </div>
             </div>

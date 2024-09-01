@@ -14,7 +14,7 @@
                      use Carbon\Carbon;
                      $dt = Carbon::now();
                      $dt->addDays(1);
-                    echo "<p style='color:#0088ff;'>" . $dt->toHijri()->isoFormat('LL') . " A.H.". "</p>" ;
+                    echo "<p style='color:#F67402;'>" . $dt->toHijri()->isoFormat('LL') . " A.H.". "</p>" ;
                     ?>
                 
                 </div>

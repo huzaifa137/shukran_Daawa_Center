@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
 
     <!-- Title -->
-    <title>..:: Sunnah Islam Media ::..</title>
+    <title>..:: shukran Daawa Center ::..</title>
 
     <!-- Favicon -->
     <link href="/assets/images/libraria-logo-v3.png" rel="icon" type="image/x-icon" />
@@ -209,7 +209,7 @@
                 use Carbon\Carbon;
                 $dt = Carbon::now();
                 $dt->addDays(1);
-                echo "<p style='color:#0088ff;'>" . $dt->toHijri()->isoFormat('LL') . ' A.H.' . '</p>';
+                echo "<p style='color:#F67402;'>" . $dt->toHijri()->isoFormat('LL') . ' A.H.' . '</p>';
                 ?>
             </div>
             <div class="breadcrumb">
@@ -441,7 +441,7 @@
                                         <div class="row">
                                             <div class="col-md-4 col-sm-6 widget-container">
                                                 <div id="text-2" class="widget widget_text">
-                                                    <h3 class="footer-widget-title">About &nbsp; Sunnah Islam Media
+                                                    <h3 class="footer-widget-title">About &nbsp; shukran Daawa Center
                                                     </h3>
                                                     <span class="underline left"></span>
                                                     <div class="textwidget" style="text-align: justify">

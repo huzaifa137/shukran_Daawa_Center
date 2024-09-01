@@ -14,7 +14,7 @@
                      use Carbon\Carbon;
                      $dt = Carbon::now();
                      $dt->addDays(1);
-                    echo "<p style='color:#0088ff;'>" . $dt->toHijri()->isoFormat('LL') . " A.H.". "</p>" ;
+                    echo "<p style='color:#F67402;'>" . $dt->toHijri()->isoFormat('LL') . " A.H.". "</p>" ;
                     ?>
                 
                 </div>
@@ -189,7 +189,7 @@
                                                             <h3 class="section-title">Who we are</h3>
                                                             <span class="underline left"></span>
                                                             <p style="text-align: justify"> Our Da'wah (call/ preaching) is established upon Kitaab (the book of Allah) and The Sunnah (Authentic traditions of prophet Muhammad) according to the understanding of The Salaf (righteous predecessors of this Ummah). What they considered to be first and foremost in their da'wah is what is first and foremost in our da'wah. It's nothing else but "Tauhiid", singling out Allah, in His Lordship (Rubuubiyyah), His sole right to be worshipped (Uluuhiyyah) and His perfect names and attributes (Asmaa' wa Asswifaat).</p> <p style="text-align: justify"> Kindly contact us immediately if you find any material contradicting the Quran and the Sunnah or if you come across any errors due to our ignorance and lack of Islamic knowledge. </p>
-                                                            <p style="text-align: justify">Sunnah Islam Media does not have specific types of members based upon allegiance, identity card, tribe, region, sect, or anything else. Rather, we consider everyone who is pleased with Allah as Lord, with Islam as a religion, and with Muhammad صلى الله عليه وسلم as a Prophet, to automatically be a member of the organization and deserving of the organization’s services. <br> <br> We reject hizbiyyah, (partisanship) and disunity, and we call everyone to be part of the saved sect; To adhere to the Qur'an and the Sunnah according to the understanding of the pious predecessors of this Ummah. </p>
+                                                            <p style="text-align: justify">shukran Daawa Center does not have specific types of members based upon allegiance, identity card, tribe, region, sect, or anything else. Rather, we consider everyone who is pleased with Allah as Lord, with Islam as a religion, and with Muhammad صلى الله عليه وسلم as a Prophet, to automatically be a member of the organization and deserving of the organization’s services. <br> <br> We reject hizbiyyah, (partisanship) and disunity, and we call everyone to be part of the saved sect; To adhere to the Qur'an and the Sunnah according to the understanding of the pious predecessors of this Ummah. </p>
                                                             <p style="text-align: justify">This is <b> not-for-profit</b> website and all material contained within this website is published free of charge and in their original format for spreading Islamic knowledge.</p>
                                                         </div>
                                                     </div>
@@ -266,7 +266,7 @@
                                                             <h3 class="section-title">COPYRIGHT</h3>
                                                             <span class="underline left"></span>
                                                             <p style="text-align: justify">This site may contain images, books, audio and video content delivered to our audience. Some of these maybe copyrighted materials the use of which has not been specifically authorized by the copyright owners.</p>
-                                                            <p style="text-align: justify">Sunnah Islam Media is making such material available in our effort to advance understanding of Islam and Prophetic teachings among the Muslim brothers and sisters we do not own nor create some of this content.</p>
+                                                            <p style="text-align: justify">shukran Daawa Center is making such material available in our effort to advance understanding of Islam and Prophetic teachings among the Muslim brothers and sisters we do not own nor create some of this content.</p>
                                                             <p style="text-align: justify">We do believe this constitutes a "Fair Use" of any such copyrighted material however would you wish to have any of your work removed from our site, please inform us and we will remove it immediately. Provide legal proof of your right to demand removal. If verified, the material will be removed immediately. Feel free to email us at <span><a href="mailto:info@sunnahislammedia.com">info@sunnahislammedia.com</a></span>  to raise your complaint.</p>
                                                             <b><p style="text-align: justify">All credits go to their rightful owners.</p></b>
                                                             <a href="javascript:void()" class="btn btn-dark-gray">Donate</a>
@@ -357,7 +357,7 @@
                                         <div class="col-md-6 col-md-offset-3 text-center">
                                             <h2 class="section-title">Check Out The New Releases</h2>
                                             <span class="underline center"></span>
-                                            <p class="lead" id="hadith_intro">All the recently uploaded islamic-books and pdfs in different languages from Sunnah Islam Media collection are shown here.</p>
+                                            <p class="lead" id="hadith_intro">All the recently uploaded islamic-books and pdfs in different languages from shukran Daawa Center collection are shown here.</p>
                                         </div>
                                     </div>
                                 </div>
